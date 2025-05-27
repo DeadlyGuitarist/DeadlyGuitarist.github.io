@@ -1,120 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="af">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Wedding</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+  <title>Alex & Jamie Bruilof</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet" />
+  
   <style>
-    :root {
-      --accent: #b99879;
-      --bg: #fffaf6;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
+    /* Reset and base */
+    *, *::before, *::after {
       box-sizing: border-box;
     }
-
     body {
+      margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: var(--bg);
-      color: #444;
+      background-color: #f7f4f0;
+      color: #4a4a4a;
+      line-height: 1.6;
       scroll-behavior: smooth;
     }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
+    /* Header Hero Section */
     header {
+      background-image: url('images/hero-placeholder.jpg');
+      background-size: cover;
+      background-position: center;
       height: 100vh;
-      background: url('temp.jpg') center/cover no-repeat;
-      color: white;
-      text-align: center;
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
     }
-
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 1;
+    }
+    header > * {
+      position: relative;
+      z-index: 2;
+    }
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.5em;
-      margin-bottom: 0.2em;
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 0.3em;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
-
     header p {
-      font-size: 1.3em;
       font-weight: 300;
+      font-size: 1.3rem;
+      letter-spacing: 0.1em;
+      margin-top: 0;
     }
-
+    /* Scroll Down */
     .scroll-down {
       position: absolute;
-      bottom: 30px;
-      font-size: 2em;
-      color: white;
+      bottom: 40px;
+      font-size: 3rem;
+      color: #fff;
       animation: bounce 2s infinite;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+      z-index: 2;
     }
-
     @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(10px); }
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, 15px); }
     }
 
-    section {
-      padding: 80px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    section h2 {
+    /* Section Titles */
+    h2.section-title {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: var(--accent);
+      font-size: 2.8rem;
+      color: #b99879;
+      margin-bottom: 0.8em;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    /* Paragraphs */
+    p.section-text {
+      max-width: 600px;
+      margin: 0 auto 1.6em;
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #4a4a4a;
+    }
+    
+    /* Image Block */
+    .image-block {
+      width: 100%;
+      height: 380px;
+      background-image: url('images/photo-placeholder.jpg');
+      background-position: center;
+      background-size: cover;
+      margin: 3em 0;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
 
-    section p {
-      font-size: 1.2em;
-      line-height: 1.8em;
-      margin-bottom: 20px;
+    /* Details Section */
+    .details-list {
+      max-width: 500px;
+      margin: 0 auto 3em;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #555;
+      list-style: none;
+      padding-left: 0;
+    }
+    .details-list li {
+      margin-bottom: 1em;
+    }
+    .details-list strong {
+      font-weight: 600;
+      color: #b99879;
+      display: inline-block;
+      width: 110px;
     }
 
-    .photo-block {
-      background: url('temp.jpg') center/cover no-repeat;
-      height: 60vh;
-      margin: 40px 0;
-    }
-
+    /* RSVP Button */
     .rsvp-btn {
       display: inline-block;
-      background: var(--accent);
+      background-color: #b99879;
       color: white;
-      padding: 14px 32px;
+      padding: 14px 40px;
+      font-size: 1.3rem;
+      font-weight: 600;
       border-radius: 6px;
-      text-decoration: none;
-      font-size: 1.1em;
-      margin-top: 30px;
-      transition: background 0.3s ease;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      box-shadow: 0 5px 8px rgba(185, 145, 95, 0.5);
+      user-select: none;
+      margin-bottom: 6em;
     }
-
-    .rsvp-btn:hover {
-      background: #a17b5a;
+    .rsvp-btn:hover,
+    .rsvp-btn:focus {
+      background-color: #a87e53;
+      outline: none;
     }
-
+    
+    /* Footer */
     footer {
       text-align: center;
-      padding: 40px 20px;
-      color: #999;
-      font-size: 0.9em;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
     }
 
+    /* Responsive */
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2.2em;
+        font-size: 2.5rem;
       }
-      section h2 {
-        font-size: 1.7em;
+      h2.section-title {
+        font-size: 2rem;
+      }
+      .image-block {
+        height: 220px;
+      }
+      .rsvp-btn {
+        padding: 12px 30px;
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -123,36 +201,41 @@
 
   <header>
     <h1>Alex & Jamie</h1>
-    <p>Getting Married • 20 December 2025</p>
-    <div class="scroll-down">&#x25BC;</div>
+    <p>Saterdag 20 Desember 2025</p>
+    <div class="scroll-down" onclick="document.getElementById('uitnodiging').scrollIntoView({behavior:'smooth'})">&#x25BC;</div>
   </header>
 
-  <section id="welcome">
-    <h2>You're Invited</h2>
-    <p>We’re so excited to share our special day with the people we love most. Join us in celebrating our wedding.</p>
-  </section>
+  <main class="container">
 
-  <div class="photo-block"></div>
+    <section id="uitnodiging">
+      <h2 class="section-title">Jy is uitgenooi</h2>
+      <p class="section-text">
+        Ons is baie opgewonde om jou uit te nooi na ons bruilof. Sluit asseblief by ons aan vir ’n dag vol liefde, lag en vreugde terwyl ons saam ’n nuwe lewe begin.
+      </p>
 
-  <section id="details">
-    <h2>Wedding Details</h2>
-    <p><strong>Date:</strong> Saturday, 20 December 2025</p>
-    <p><strong>Time:</strong> Ceremony at 3:00 PM, Reception follows</p>
-    <p><strong>Venue:</strong> Rose Garden Estate, Cape Town</p>
-    <p><strong>Dress Code:</strong> Formal attire, please</p>
-  </section>
+      <div class="image-block"></div>
 
-  <section id="rsvp">
-    <h2>RSVP</h2>
-    <p>Let us know if you’ll be attending by 1 December 2025.</p>
-    <a class="rsvp-btn" href="https://wa.me/27712345678?text=Hi%20Alex%20and%20Jamie%2C%20I'm%20excited%20to%20celebrate%20your%20wedding%20with%20you!" target="_blank" rel="noopener noreferrer">
-      RSVP via WhatsApp
-    </a>
-  </section>
+      <h2 class="section-title">Bruilofs Besonderhede</h2>
+      <ul class="details-list">
+        <li><strong>Datum:</strong> Saterdag, 20 Desember 2025</li>
+        <li><strong>Tyd:</strong> Seremonie om 15:00, onthaal volg daarna</li>
+        <li><strong>Lokaal:</strong> Roos Tuin Landgoed, Kaapstad</li>
+        <li><strong>Kleredrag:</strong> Formeel</li>
+      </ul>
 
-  <footer>
-    © 2025 Alex & Jamie’s Wedding • Made with love
-  </footer>
+      <a
+        href="https://wa.me/27712345678?text=Hallo%20Alex%20en%20Jamie%2C%20ek%20wil%20graag%20vir%20julle%20bruilof%20RSVP%20gee!"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rsvp-btn"
+        >RSVP via WhatsApp</a
+      >
+
+    </section>
+
+  </main>
+
+  <footer>© 2025 Alex & Jamie se Bruilof • Met liefde gemaak</footer>
 
 </body>
 </html>
