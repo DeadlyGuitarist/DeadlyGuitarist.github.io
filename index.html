@@ -2,85 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>You're Invited – Our Wedding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>John & Jane's Wedding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: "Helvetica Neue", sans-serif;
+    }
+
+    html, body {
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+      background: #fffaf6;
       color: #333;
-      background: #fdfcf9;
     }
 
     header {
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
       height: 100vh;
-      color: white;
+      background: url('https://images.unsplash.com/photo-1523325225574-bdc67f85b4bc?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      flex-direction: column;
+      color: white;
     }
 
     header h1 {
-      font-size: 3.5em;
-      margin: 0;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.5em;
-      margin-top: 10px;
+      font-size: 1.2em;
       font-weight: 300;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      font-size: 2em;
+      color: white;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
     }
 
     section {
       max-width: 800px;
-      margin: 80px auto;
+      margin: 100px auto;
       padding: 0 20px;
       text-align: center;
     }
 
-    .details {
-      font-size: 1.2em;
-      line-height: 2em;
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      margin-bottom: 20px;
     }
 
-    .rsvp {
-      margin-top: 60px;
-    }
-
-    .rsvp a {
-      text-decoration: none;
-      background: #be5c5c;
-      color: white;
-      padding: 14px 32px;
+    section p {
       font-size: 1.1em;
-      border-radius: 8px;
+      line-height: 1.6em;
+      margin-bottom: 20px;
+    }
+
+    .rsvp-button {
+      margin-top: 40px;
+    }
+
+    .rsvp-button a {
+      text-decoration: none;
+      background: #d36b6b;
+      color: white;
+      padding: 14px 30px;
+      font-size: 1em;
+      border-radius: 6px;
       transition: background 0.3s ease;
     }
 
-    .rsvp a:hover {
-      background: #993d3d;
+    .rsvp-button a:hover {
+      background: #b34d4d;
     }
 
     footer {
-      margin-top: 100px;
       text-align: center;
-      color: #777;
+      padding: 40px 20px;
+      color: #888;
       font-size: 0.9em;
-      padding-bottom: 40px;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2.2em;
+        font-size: 2em;
       }
 
-      header p {
-        font-size: 1em;
+      section {
+        margin: 60px auto;
       }
     }
   </style>
@@ -89,25 +113,33 @@
 
   <header>
     <h1>John & Jane</h1>
-    <p>Are Getting Married</p>
+    <p>15 December 2025 • Cape Town</p>
+    <div class="scroll-down">&#x25BC;</div>
   </header>
 
-  <section>
+  <section id="details">
     <h2>You're Invited</h2>
-    <div class="details">
-      <p><strong>Date:</strong> Saturday, 15 December 2025</p>
-      <p><strong>Time:</strong> Ceremony starts at 3:00 PM</p>
-      <p><strong>Location:</strong> Rosewood Estate, Cape Town</p>
-      <p>Join us for a day of love, joy, and celebration.</p>
-    </div>
+    <p>We are thrilled to invite you to our wedding day — a celebration of love, friendship, and family.</p>
+    <p><strong>Ceremony:</strong> 3:00 PM at Rosewood Estate</p>
+    <p><strong>Reception:</strong> 6:00 PM Dinner & Dancing</p>
+    <p><strong>Dress Code:</strong> Formal</p>
+  </section>
 
-    <div class="rsvp">
-      <a href="https://forms.gle/your-rsvp-link" target="_blank">RSVP Now</a>
+  <section id="venue">
+    <h2>Venue</h2>
+    <p>Rosewood Estate<br/>Cape Town, Western Cape<br/><a href="https://maps.google.com" target="_blank">View on Google Maps</a></p>
+  </section>
+
+  <section id="rsvp">
+    <h2>RSVP</h2>
+    <p>Please let us know by 30 November 2025 if you'll be attending.</p>
+    <div class="rsvp-button">
+      <a href="https://forms.gle/your-form-link" target="_blank">Click Here to RSVP</a>
     </div>
   </section>
 
   <footer>
-    © 2025 John & Jane’s Wedding • Built with ❤️
+    © 2025 John & Jane • With love
   </footer>
 
 </body>
