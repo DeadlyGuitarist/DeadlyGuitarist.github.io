@@ -11,12 +11,16 @@
       background: #fffaf0;
       color: #3e3e3e;
       text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .header {
       text-align: center;
       padding: 3rem 1rem;
       background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('temp.jpg') center/cover no-repeat;
       color: white;
+      width: 100%;
     }
     .header h1 {
       font-size: 3rem;
@@ -34,7 +38,7 @@
     .names h4 {
       font-size: 1.5rem;
       font-weight: normal;
-      margin: 0 0 1rem;
+      margin: 0.2rem 0 1rem;
     }
     .names .ampersand {
       font-size: 4rem;
@@ -49,10 +53,31 @@
       text-align: center;
       padding: 2rem;
       font-size: 1.3rem;
+      max-width: 800px;
+    }
+    .details-section {
+      padding: 2rem;
+      background: #fff5e6;
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: center;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .details-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .details-section p {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
     }
     .rsvp-section {
       padding: 2rem;
       background: #fdf6f0;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 1rem;
     }
     .rsvp-section h2 {
       text-align: center;
@@ -65,6 +90,12 @@
       border-radius: 1rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
+    .bible-verse {
+      text-align: center;
+      margin: 3rem 1rem 2rem;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
   </style>
 </head>
 <body>
@@ -72,11 +103,11 @@
   <div class="header">
     <h1>JY WORD HARTELIK UITGENOOI NA DIE BRUILOF VAN</h1>
     <div class="names">
-      <h2>ELLIS</h2>
-      <h4>BOTHA</h4>
+      <h2>Charlie</h2>
+      <h4>Ellis</h4>
       <div class="ampersand">&amp;</div>
-      <h2>ANÉ</h2>
-      <h4>DE WET</h4>
+      <h2>Naomi</h2>
+      <h4>Brakpanhuizen</h4>
     </div>
     <p>KOM DEEL IN ONS VREUGDE EN VIER SAAM FEES!</p>
   </div>
@@ -108,24 +139,29 @@
     <p>KOM DEEL IN ONS VREUGDE, LAG EN LIEFDE TERWYL ONS DIE KNOOP DEURHAK!</p>
     <p>11 OKTOBER 2025</p>
     <p>LIONS CREEK</p>
+  </div>
 
+  <div class="details-section">
     <h1>ONS TROUE</h1>
     <p>FORMELE KLEREDRAG.</p>
     <p>KONTANTKROEG MET KAARTFASILITEITE.</p>
     <p>GEEN ALKOHOL VAN BUITE DIE PERSEEL WORD TOEGELAAT NIE.</p>
     <p>INDIEN ENIGE GEVAL GEVIND WORD, SAL DIT 'N STEWIGE BOETE TOT GEVOLG HÊ.</p>
+  </div>
 
-    <div class="rsvp-section">
-      <h2>RSVP</h2>
-      <p>RSVP ASSEBLIEF TEEN 27 JULIE 2025.</p>
-      <p>AS JY NIE TEEN {DATUM} RSVP NIE, NEEM ONS AAN JY SAL DIT NIE KAN MAAK NIE.</p>
-      <p>METGESELLE SLEGS PER UITNODIGING.</p>
-      <p>KINDERS WELKOM</p>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQvUCuXWTfV-gtuThEFrKPBqije-Zcp-6oAesCxHqVEGrlAg/viewform?embedded=true" width="640" height="969" frameborder="0" marginheight="0" marginwidth="0">Laai tans…</iframe>
-    </div>
+  <div class="rsvp-section">
+    <h2>RSVP</h2>
+    <p>RSVP ASSEBLIEF TEEN 27 JULIE 2025.</p>
+    <p>AS JY NIE TEEN DAARDIE TYD RSVP NIE, NEEM ONS AAN JY SAL DIT NIE KAN MAAK NIE.</p>
+    <p>METGESELLE SLEGS PER UITNODIGING.</p>
+    <p>KINDERS WELKOM</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQvUCuXWTfV-gtuThEFrKPBqije-Zcp-6oAesCxHqVEGrlAg/viewform?embedded=true" width="640" height="969" frameborder="0" marginheight="0" marginwidth="0">Laai tans…</iframe>
+  </div>
 
+  <div class="bible-verse">
     <p>"WAT GOD DAN SAAMGEVOEG HET, MAG GEEN MENS SKEI NIE." MARKUS 10:9</p>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
