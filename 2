@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="af">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Elegante Bruilof Uitnodiging</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #0a1033, #03060a);
+    font-family: 'Bodoni Moda', serif;
+    color: #c0c6ca;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem 3rem;
+    min-height: 100vh;
+  }
+
+  /* Container for full width content */
+  .container {
+    max-width: 900px;
+    width: 100%;
+  }
+
+  /* Header */
+  .header {
+    background: url('temp.jpg') center center/cover no-repeat;
+    position: relative;
+    padding: 6rem 2rem 4rem;
+    margin-bottom: 3rem;
+    border-radius: 16px;
+    box-shadow:
+      inset 0 0 0 1000px rgba(10, 16, 51, 0.65);
+    text-align: center;
+    color: #c0c6ca;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+    color: #d0d6db;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  /* Names block */
+  .names {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 6.5rem;
+    line-height: 1.05;
+    color: #e3e9f1;
+    margin-bottom: 0.2rem;
+  }
+  .names span.first-name,
+  .names span.second-name {
+    display: block;
+  }
+  .names .surname {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #b0b6bb;
+    margin-top: -0.7rem;
+    letter-spacing: 0.12em;
+  }
+  .names .ampersand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 4.5rem;
+    color: #4d69ad;
+    margin: 0.3rem 0 1rem;
+    letter-spacing: 0;
+  }
+
+  /* Sections */
+  section {
+    background: #0c123e;
+    border-radius: 12px;
+    padding: 3rem 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 0 12px rgba(77, 105, 173, 0.6);
+  }
+  section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #4d69ad;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  section p {
+    font-size: 1.3rem;
+    color: #bfc4c9;
+    text-align: center;
+    margin: 0.4rem 0;
+  }
+
+  /* Carousel styling */
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.7);
+  }
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .carousel-item {
+    min-width: 100%;
+    user-select: none;
+  }
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+  }
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  .carousel-controls button {
+    pointer-events: auto;
+    background: rgba(77, 105, 173, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 3.8rem;
+    height: 3.8rem;
+    color: #d0d6db;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    user-select: none;
+  }
+  .carousel-controls button:hover {
+    background: #4d69ad;
+  }
+
+  /* RSVP iframe styling */
+  #rsvp-section iframe {
+    width: 100%;
+    max-width: 700px;
+    height: 980px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 0 20px rgba(77, 105, 173, 0.8);
+    margin: 2rem auto 0;
+    display: block;
+  }
+
+  /* Bible verse */
+  .bible-verse {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #a3adc8;
+    text-align: center;
+    margin-top: 1rem;
+    letter-spacing: 0.12em;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .names {
+      font-size: 4.5rem;
+    }
+    .names .surname {
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 2rem 1.5rem;
+    }
+    #rsvp-section iframe {
+      height: 700px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="header" role="banner" aria-label="Wedding invitation header">
+      <h1>JY IS UITGENOOI NA DIE HUWELIKSVIERING VAN</h1>
+      <div class="names" aria-label="Bride and Groom Names">
+        <span class="first-name">Charlie</span>
+        <span class="surname">Ellis</span>
+        <div class="ampersand" aria-hidden="true">&amp;</div>
+        <span class="second-name">Naomi</span>
+        <span class="surname">Brakpanhuizen</span>
+      </div>
+    </header>
+
+    <section aria-labelledby="wedding-details-title">
+      <h2 id="wedding-details-title">ONS TROUE</h2>
+      <p>FORMELE KLEREDRAG</p>
+      <p>KONTANTKROEG MET KAARTFASILITEITE</p>
+      <p>GEEN ALKOHOL VAN BUITE DIE PERSEEL WORD TOEGELAAT NIE</p>
+      <p>INDIEN ENIGE GEVAL GEVIND WORD, SAL DIT 'N STEWIGE BOETE TOT GEVOLG HÊ</p>
+    </section>
+
+    <section aria-label="Wedding photos carousel">
+      <div class="carousel" id="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active"><img src="temp.jpg" alt="Bruiloffoto 1" /></div>
+          <div class="carousel-item"><img src="temp.jpg" alt="Bruiloffoto 2" /></div>
+          <div class="carousel-item"><img src="temp.jpg" alt="Bruiloffoto 3" /></div>
+        </div>
+        <div class="carousel-controls">
+          <button aria-label="Vorige foto" id="prevBtn">&#10094;</button>
+          <button aria-label="Volgende foto" id="nextBtn">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="invitation-text-title" id="invitation-text">
+      <h2 id="invitation-text-title">UITNODIGING</h2>
+      <p>ONS IS SO OPGEWONDE OM HIERDIE PRAGTIGE DAG SAAM MET DIE MENSE WAT ONS DIE MEESTE LIEF HET TE VIER</p>
+      <p>KOM DEEL IN ONS VREUGDE, LAG EN LIEFDE TERWYL ONS DIE KNOOP DEURHAK</p>
+      <p>11 OKTOBER 2025</p>
+      <p>LIONS CREEK</p>
+    </section>
+
+    <section class="location-section" aria-labelledby="location-title">
+      <h2 id="location-title">TROUE VENUE</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28627.33309180913!2d27.917209437404847!3d-25.882253276295947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebbfd50c22a1b23%3A0xa7e66d41c9361b3c!2sLions%20Creek!5e0!3m2!1sen!2sza!4v1716900000000" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade" 
+        title="Lions Creek Venue Location"
+      ></iframe>
+    </section>
+
+    <section id="rsvp-section" aria-labelledby="rsvp-title">
+      <h2 id="rsvp-title">RSVP</h2>
+      <p>RSVP ASSEBLIEF TEEN 27 JULIE 2025</p>
+      <p>AS JY NIE TEEN DAARDIE TYD RSVP NIE, NEEM ONS AAN JY SAL DIT NIE KAN MAAK NIE</p>
+      <p>METGESELLE SLEGS PER UITNODIGING</p>
+      <p>KINDERS WELKOM</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQvUCuXWTfV-gtuThEFrKPBqije-Zcp-6oAesCxHqVEGrlAg/viewform?embedded=true" loading="lazy"></iframe>
+    </section>
+
+    <footer class="bible-verse" aria-label="Bible verse">
+      <p>"WAT GOD DAN SAAMGEVOEG HET, MAG GEEN MENS SKEI NIE." MARKUS 10:9</p>
+    </footer>
+
+  </div>
+
+<script>
+  // Simple Carousel functionality
+  const carouselInner = document.querySelector('.carousel-inner');
+  const items = document.querySelectorAll('.carousel-item');
+  let currentIndex = 0;
+
+  const showSlide = index => {
+    if(index < 0) index = items.length - 1;
+    if(index >= items.length) index = 0;
+    currentIndex = index;
+    const offset = -index * 100;
+    carouselInner.style.transform = `translateX(${offset}%)`;
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    showSlide(currentIndex - 1);
+  });
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    showSlide(currentIndex + 1);
+  });
+
+  // Initialize
+  showSlide(currentIndex);
+</script>
+
+</body>
+</html>
