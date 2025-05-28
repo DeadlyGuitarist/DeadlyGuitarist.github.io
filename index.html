@@ -1,241 +1,94 @@
 <!DOCTYPE html>
-<html lang="af">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alex & Jamie Bruilof</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet" />
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're Invited!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <style>
-    /* Reset and base */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
     body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #f7f4f0;
-      color: #4a4a4a;
-      line-height: 1.6;
-      scroll-behavior: smooth;
+      font-family: 'Georgia', serif;
+      background: #fffaf0;
+      color: #3e3e3e;
     }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    img {
-      max-width: 100%;
-      display: block;
-    }
-    
-    /* Container */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Header Hero Section */
-    header {
-      background-image: url('images/temp.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
+    .header {
       text-align: center;
-      padding: 0 20px;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.3);
-      z-index: 1;
-    }
-    header > * {
-      position: relative;
-      z-index: 2;
-    }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      font-weight: 700;
-      margin-bottom: 0.3em;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-    header p {
-      font-weight: 300;
-      font-size: 1.3rem;
-      letter-spacing: 0.1em;
-      margin-top: 0;
-    }
-    /* Scroll Down */
-    .scroll-down {
-      position: absolute;
-      bottom: 40px;
-      font-size: 3rem;
-      color: #fff;
-      animation: bounce 2s infinite;
-      left: 50%;
-      transform: translateX(-50%);
-      cursor: pointer;
-      z-index: 2;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translate(-50%, 0); }
-      50% { transform: translate(-50%, 15px); }
-    }
-
-    /* Section Titles */
-    h2.section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      color: #b99879;
-      margin-bottom: 0.8em;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-    /* Paragraphs */
-    p.section-text {
-      max-width: 600px;
-      margin: 0 auto 1.6em;
-      font-weight: 300;
-      font-size: 1.1rem;
-      color: #4a4a4a;
-    }
-    
-    /* Image Block */
-    .image-block {
-      width: 100%;
-      height: 380px;
-      background-image: url('images/temp.jpg');
-      background-position: center;
-      background-size: cover;
-      margin: 3em 0;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
-
-    /* Details Section */
-    .details-list {
-      max-width: 500px;
-      margin: 0 auto 3em;
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: #555;
-      list-style: none;
-      padding-left: 0;
-    }
-    .details-list li {
-      margin-bottom: 1em;
-    }
-    .details-list strong {
-      font-weight: 600;
-      color: #b99879;
-      display: inline-block;
-      width: 110px;
-    }
-
-    /* RSVP Button */
-    .rsvp-btn {
-      display: inline-block;
-      background-color: #b99879;
+      padding: 3rem 1rem;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('temp.jpg') center/cover no-repeat;
       color: white;
-      padding: 14px 40px;
-      font-size: 1.3rem;
-      font-weight: 600;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      box-shadow: 0 5px 8px rgba(185, 145, 95, 0.5);
-      user-select: none;
-      margin-bottom: 6em;
     }
-    .rsvp-btn:hover,
-    .rsvp-btn:focus {
-      background-color: #a87e53;
-      outline: none;
+    .header h1 {
+      font-size: 3rem;
+      font-weight: bold;
     }
-    
-    /* Footer */
-    footer {
+    .carousel-inner img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+    }
+    .invitation-text {
       text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #aaa;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 600;
+      padding: 2rem;
+      font-size: 1.3rem;
     }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.5rem;
-      }
-      h2.section-title {
-        font-size: 2rem;
-      }
-      .image-block {
-        height: 220px;
-      }
-      .rsvp-btn {
-        padding: 12px 30px;
-        font-size: 1.1rem;
-      }
+    .rsvp-section {
+      padding: 2rem;
+      background: #fdf6f0;
+    }
+    .rsvp-section h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .rsvp-section iframe {
+      display: block;
+      margin: 0 auto;
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Alex & Jamie</h1>
-    <p>Saterdag 20 Desember 2025</p>
-    <div class="scroll-down" onclick="document.getElementById('uitnodiging').scrollIntoView({behavior:'smooth'})">&#x25BC;</div>
-  </header>
+  <div class="header">
+    <h1>You're Invited</h1>
+    <p>Join us in celebrating our wedding day</p>
+  </div>
 
-  <main class="container">
+  <div id="weddingCarousel" class="carousel slide mt-4 container" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="temp.jpg" class="d-block w-100" alt="Wedding Photo 1">
+      </div>
+      <div class="carousel-item">
+        <img src="temp.jpg" class="d-block w-100" alt="Wedding Photo 2">
+      </div>
+      <div class="carousel-item">
+        <img src="temp.jpg" class="d-block w-100" alt="Wedding Photo 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#weddingCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#weddingCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-    <section id="uitnodiging">
-      <h2 class="section-title">Jy is uitgenooi</h2>
-      <p class="section-text">
-        Ons is baie opgewonde om jou uit te nooi na ons bruilof. Sluit asseblief by ons aan vir ’n dag vol liefde, lag en vreugde terwyl ons saam ’n nuwe lewe begin.
-      </p>
+  <div class="invitation-text">
+    <p>We are so excited to celebrate this beautiful day with the people we love the most.</p>
+    <p>Come share in our joy, laughter, and love as we tie the knot!</p>
+    <p><strong>Date:</strong> [Your Wedding Date]</p>
+    <p><strong>Venue:</strong> [Wedding Venue Name]</p>
+  </div>
 
-      <div class="image-block"></div>
+  <div class="rsvp-section">
+    <h2>RSVP</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQvUCuXWTfV-gtuThEFrKPBqije-Zcp-6oAesCxHqVEGrlAg/viewform?embedded=true" width="640" height="969" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
 
-      <h2 class="section-title">Bruilofs Besonderhede</h2>
-      <ul class="details-list">
-        <li><strong>Datum:</strong> Saterdag, 20 Desember 2025</li>
-        <li><strong>Tyd:</strong> Seremonie om 15:00, onthaal volg daarna</li>
-        <li><strong>Lokaal:</strong> Roos Tuin Landgoed, Kaapstad</li>
-        <li><strong>Kleredrag:</strong> Formeel</li>
-      </ul>
-
-      <a
-        href="https://wa.me/27712345678?text=Hallo%20Alex%20en%20Jamie%2C%20ek%20wil%20graag%20vir%20julle%20bruilof%20RSVP%20gee!"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="rsvp-btn"
-        >RSVP via WhatsApp</a
-      >
-
-    </section>
-
-  </main>
-
-  <footer>© 2025 Alex & Jamie se Bruilof • Met liefde gemaak</footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
